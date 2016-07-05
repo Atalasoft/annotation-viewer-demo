@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform>AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{836601ED-5C47-4F18-BEA6-33AB13B4D94F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Atalasoft.Demo.AnnotationViewer</RootNamespace>
+    <AssemblyName>Atalasoft.Demo.AnnotationViewer</AssemblyName>
+    <ApplicationIcon>AnnotateViewer.ico</ApplicationIcon>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <StyleCopTargets>$(SolutionDir)..\..\Build\StyleCop\StyleCop.Targets</StyleCopTargets>
+    <FxCopTargets>$(SolutionDir)..\..\Build\build.fxcop.Targets</FxCopTargets>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <NuGetPackageImportStamp>000193e4</NuGetPackageImportStamp>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleAssemblies>C:\Program Files\Microsoft Visual Studio 9.0\Team Tools\Static Analysis Tools\FxCop\Rules</CodeAnalysisRuleAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleAssemblies>C:\Program Files\Microsoft Visual Studio 9.0\Team Tools\Static Analysis Tools\FxCop\Rules</CodeAnalysisRuleAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Atalasoft.dotImage, Version=10.6.1.5353, Culture=neutral, PublicKeyToken=2b02b46f7326f73b, processorArchitecture=x86">
+      <HintPath>..\packages\Atalasoft.dotImage.x86.10.6.1.85353\lib\net40\x86\Atalasoft.dotImage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Atalasoft.dotImage.Lib, Version=10.6.1.5353, Culture=neutral, PublicKeyToken=2b02b46f7326f73b, processorArchitecture=x86">
+      <HintPath>..\packages\Atalasoft.dotImage.Lib.x86.10.6.1.85353\lib\net40\x86\Atalasoft.dotImage.Lib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Atalasoft.dotImage.Pdf, Version=10.6.1.5353, Culture=neutral, PublicKeyToken=2b02b46f7326f73b, processorArchitecture=x86">
+      <HintPath>..\packages\Atalasoft.dotImage.Pdf.x86.10.6.1.85353\lib\net40\x86\Atalasoft.dotImage.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Atalasoft.dotImage.PdfDoc.Bridge, Version=10.6.1.5353, Culture=neutral, PublicKeyToken=2b02b46f7326f73b, processorArchitecture=x86">
+      <HintPath>..\packages\Atalasoft.dotImage.PdfDoc.Bridge.x86.10.6.1.85353\lib\net40\x86\Atalasoft.dotImage.PdfDoc.Bridge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Atalasoft.dotImage.WinControls, Version=10.6.1.5353, Culture=neutral, PublicKeyToken=2b02b46f7326f73b, processorArchitecture=x86">
+      <HintPath>..\packages\Atalasoft.dotImage.WinControls.x86.10.6.1.85353\lib\net40\x86\Atalasoft.dotImage.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Atalasoft.PdfDoc, Version=10.6.1.5353, Culture=neutral, PublicKeyToken=2b02b46f7326f73b, processorArchitecture=x86">
+      <HintPath>..\packages\Atalasoft.PdfDoc.x86.10.6.1.85353\lib\net40\x86\Atalasoft.PdfDoc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Atalasoft.Shared, Version=10.6.1.5353, Culture=neutral, PublicKeyToken=2b02b46f7326f73b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atalasoft.Shared.10.6.1.85353\lib\net40\x86\Atalasoft.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnnotationDefaults.cs" />
+    <Compile Include="AnnotationType.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WinDemoHelperMethods.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control-Interactive Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RectangleSelection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom-In.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom-Out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AnnotateViewer.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Condition="Exists('$(StyleCopTargets)')" Project="$(StyleCopTargets)" />
+  <Import Condition="Exists('$(FxCopTargets)')" Project="$(FxCopTargets)" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>  
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Atalasoft.dotImage.Lib.x86.10.6.1.85353\build\Atalasoft.dotImage.Lib.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atalasoft.dotImage.Lib.x86.10.6.1.85353\build\Atalasoft.dotImage.Lib.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\Atalasoft.dotImage.x86.10.6.1.85353\build\Atalasoft.dotImage.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atalasoft.dotImage.x86.10.6.1.85353\build\Atalasoft.dotImage.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\Atalasoft.PdfDoc.x86.10.6.1.85353\build\Atalasoft.PdfDoc.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atalasoft.PdfDoc.x86.10.6.1.85353\build\Atalasoft.PdfDoc.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\Atalasoft.dotImage.Pdf.x86.10.6.1.85353\build\Atalasoft.dotImage.Pdf.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atalasoft.dotImage.Pdf.x86.10.6.1.85353\build\Atalasoft.dotImage.Pdf.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\Atalasoft.dotImage.PdfDoc.Bridge.x86.10.6.1.85353\build\Atalasoft.dotImage.PdfDoc.Bridge.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atalasoft.dotImage.PdfDoc.Bridge.x86.10.6.1.85353\build\Atalasoft.dotImage.PdfDoc.Bridge.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\Atalasoft.dotImage.WinControls.x86.10.6.1.85353\build\Atalasoft.dotImage.WinControls.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atalasoft.dotImage.WinControls.x86.10.6.1.85353\build\Atalasoft.dotImage.WinControls.x86.targets'))" />
+  </Target>
+  <Import Project="..\packages\Atalasoft.dotImage.Lib.x86.10.6.1.85353\build\Atalasoft.dotImage.Lib.x86.targets" Condition="Exists('..\packages\Atalasoft.dotImage.Lib.x86.10.6.1.85353\build\Atalasoft.dotImage.Lib.x86.targets')" />
+  <Import Project="..\packages\Atalasoft.dotImage.x86.10.6.1.85353\build\Atalasoft.dotImage.x86.targets" Condition="Exists('..\packages\Atalasoft.dotImage.x86.10.6.1.85353\build\Atalasoft.dotImage.x86.targets')" />
+  <Import Project="..\packages\Atalasoft.PdfDoc.x86.10.6.1.85353\build\Atalasoft.PdfDoc.x86.targets" Condition="Exists('..\packages\Atalasoft.PdfDoc.x86.10.6.1.85353\build\Atalasoft.PdfDoc.x86.targets')" />
+  <Import Project="..\packages\Atalasoft.dotImage.Pdf.x86.10.6.1.85353\build\Atalasoft.dotImage.Pdf.x86.targets" Condition="Exists('..\packages\Atalasoft.dotImage.Pdf.x86.10.6.1.85353\build\Atalasoft.dotImage.Pdf.x86.targets')" />
+  <Import Project="..\packages\Atalasoft.dotImage.PdfDoc.Bridge.x86.10.6.1.85353\build\Atalasoft.dotImage.PdfDoc.Bridge.x86.targets" Condition="Exists('..\packages\Atalasoft.dotImage.PdfDoc.Bridge.x86.10.6.1.85353\build\Atalasoft.dotImage.PdfDoc.Bridge.x86.targets')" />
+  <Import Project="..\packages\Atalasoft.dotImage.WinControls.x86.10.6.1.85353\build\Atalasoft.dotImage.WinControls.x86.targets" Condition="Exists('..\packages\Atalasoft.dotImage.WinControls.x86.10.6.1.85353\build\Atalasoft.dotImage.WinControls.x86.targets')" />
+</Project>
