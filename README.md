@@ -1,7 +1,3 @@
-# annotation-viewer-demo
-Annotation Viewer demo application
-
-
 # Atalasoft DotImage Annotation Viewer demo
 Demo application shows usage of Annotation Viewer functionality that [DotImage](https://www.atalasoft.com/Products/DotImage) product provides. 
 
